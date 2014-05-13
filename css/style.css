@@ -1,0 +1,27 @@
+.container {
+	min-height: 300px;
+}
+#front-page {
+	text-align: center;
+	width: 100%;
+}
+#input_url {
+	display: inline-block;
+	font-size: 1.7em;
+	height: 1.3em;
+	width: 80%;
+}
+.btn {
+	display: inline-block;
+	font-size: 1.2em;
+	height: 1.8em;
+	width: 200px;
+}
+.btn-bl {
+	background-color: #0088cc;
+}
+
+code {
+	border-radius: 4px;
+	font-size: 90%;
+}
