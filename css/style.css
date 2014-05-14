@@ -25,3 +25,21 @@ code {
 	border-radius: 4px;
 	font-size: 90%;
 }
+
+.darkClass
+{
+    background-color: black;
+    filter:alpha(opacity=95); /* IE */
+    opacity: 0.95; /* Safari, Opera */
+    -moz-opacity:0.95; /* FireFox */
+    z-index: 20;
+    height: 90%;
+    width: 90%;
+    background-repeat:no-repeat;
+    background-position:center;
+    position:absolute;
+    top: 10px;
+    left: 5%;
+    color: white;
+    border-radius: 10px;
+}

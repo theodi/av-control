@@ -7,7 +7,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CSV dataset health check | ODI AV Control</title>
+<title>AV Control | ODI AV Control</title>
 <link href="http://assets.theodi.org/css/odi-bootstrap-pomegranate.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="css/nv.d3.css">
@@ -42,6 +42,12 @@
 
 
 <section id="front-page">
+	<div id="darkLayer" style="display: block;" class="darkClass">
+		<br/><br/>
+		<h1>Control Forbidden</h1>
+		<p>You are not permitted to control the AV-System from your current location.</p>
+		<p>Please check you are connected to the ODI internal network.</p>
+	</div>
 	<h1>Open 1 - Front Projector</h1>
 	<p>Projector Status: <b id="projector1_status">Unknown</b></p>
 	<button type="submit" class="btn btn-primary btn-bl" id="projector1_power"></button>

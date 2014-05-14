@@ -1,11 +1,12 @@
 var status_url = "http://odinprac.theodi.org/AV_Control/status.php?";
 var control_url = "http://odinprac.theodi.org/AV_Control/control.php?";
 
+var int1,int2;
 window.onload = function () {
 	ProjectorInfoGet("projector1");
 	ProjectorInfoGet("projector2");
-	setInterval(function(){ ProjectorInfoGet("projector1"); }, 3000);
-	setInterval(function(){ ProjectorInfoGet("projector2"); }, 3000);
+	int1 = setInterval(function(){ ProjectorInfoGet("projector1"); }, 3000);
+	int2 = setInterval(function(){ ProjectorInfoGet("projector2"); }, 3000);
 	registerListeners("projector1");
 	registerListeners("projector2");
 };
@@ -23,7 +24,9 @@ function ProjectorInfoGet(projector)
 		handleProjectorInfo(projector,data);
 	    },
 	    error: function (request, status, error) {
-		alert(status);
+		document.getElementById("darkLayer").style.display = "block";
+		clearInterval(int1);	
+		clearInterval(int2);	
 	    }
 	});
 }
@@ -51,7 +54,6 @@ function projectorPower(projector,op,skip) {
 		return data;
 	    },
 	    error: function (request, status, error) {
-		alert(status);
 	    }
 	});
 }
