@@ -25,6 +25,9 @@ function ProjectorInfoGet(projector)
 	    },
 	    error: function (request, status, error) {
 		document.getElementById("darkLayer").style.display = "block";
+		console.log(request);
+		console.log(status);
+		console.log(error);
 		clearInterval(int1);	
 		clearInterval(int2);	
 	    }

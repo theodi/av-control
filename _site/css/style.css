@@ -38,6 +38,7 @@ code {
     background-repeat:no-repeat;
     background-position:center;
     position:absolute;
+    padding: 10px;
     top: 10px;
     left: 5%;
     color: white;
