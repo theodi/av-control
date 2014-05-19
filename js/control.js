@@ -61,6 +61,24 @@ function projectorPower(projector,op,skip) {
 	});
 }
 
+function switchInput(projector,input) {
+	var myUrl = control_url + 'projector=' + projector + '&input=' + input;
+	console.log(myUrl);
+
+        $.ajax({
+            type: 'GET',
+            url: myUrl,
+            dataType: 'json',
+            success: function (data) 
+            {
+		// Depress input button?
+		return data;
+	    },
+	    error: function (request, status, error) {
+	    }
+	});
+}
+
 function registerListeners(projector) {
 
 	$( "#" + projector + "_power" ).click(function() {
@@ -70,6 +88,15 @@ function registerListeners(projector) {
 		if (power[projector] == "on") {
 			data = projectorPower(projector,"off",false);		
 		} 
+	});
+	$( "#" + projector + "_atv").click(function() {
+		switchInput(projector,"atv");
+	});
+	$( "#" + projector + "_hdmi").click(function() {
+		switchInput(projector,"hdmi");
+	});
+	$( "#" + projector + "_clickshare").click(function() {
+		switchInput(projector,"clickshare");
 	});
 
 }
