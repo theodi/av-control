@@ -30,7 +30,8 @@ function ProjectorInfoGet(projector)
 		console.log(error);
 		clearInterval(int1);	
 		clearInterval(int2);	
-	    }
+	    },
+	    timeout: 5000
 	});
 }
 
