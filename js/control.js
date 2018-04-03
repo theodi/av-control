@@ -29,7 +29,8 @@ function ProjectorInfoGet(projector)
 		console.log(status);
 		console.log(error);
 		clearInterval(int1);	
-		clearInterval(int2);	
+		clearInterval(int2);
+		location.reload();	
 	    },
 	    timeout: 5000
 	});
